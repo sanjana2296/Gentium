@@ -1,0 +1,85 @@
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+.carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+  transform: translateX(33%);
+}
+
+.carousel-inner .carousel-item-left.active, 
+.carousel-inner .carousel-item-prev {
+  transform: translateX(-33%);
+}
+  
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+  
+}
+.image1, .image2 ,.image3 {
+  opacity: 1;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+ 
+ 
+  transition: .5s ease;
+  backface-visibility: hidden;
+  float: left;
+  overflow: hidden;
+  filter: grayscale(1) ;
+  text-align: center;
+  cursor: default;
+}
+
+
+.carousel-item>.image1:hover, .carousel-item>.image2:hover, .carousel-item>.image3:hover {
+    transform: scale(0.9); 
+  filter:none;
+}
+.carousel-item>.image1 a.info , .carousel-item>.image2 a.info , .carousel-item>.image3 a.info{
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  text-transform: uppercase;
+  color: #fff;
+  
+  margin: 50px 0 0 0;
+  background-color: transparent;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  font-weight: normal;
+  height: 85%;
+  width: 85%;
+  position: absolute;
+  top: -20%;
+  left: 8%;
+  padding: 70px;
+}
+
+.carousel-item>.image1:hover a.info , .carousel-item>.image2:hover a.info,.carousel-item>.image3:hover a.info {
+  opacity: 1;
+ 
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+ 
+}
+
+ 
+.carousel-item>:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
